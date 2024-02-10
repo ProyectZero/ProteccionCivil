@@ -1,0 +1,567 @@
+* {
+	padding: 0PX;
+	margin: 0PX;
+}
+
+*::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-button:increment,
+*::-webkit-scrollbar-button {
+	display: none;
+}
+
+*::-webkit-scrollbar:horizontal {
+	height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #0d4276;
+	border-radius: 20px;
+	border: 2px solid #b43b10;
+}
+
+*::-webkit-scrollbar-track {
+	border-radius: 10px;
+	background: #f2f2f2;
+}
+
+/* Body y fondo de pantalla */
+body {
+	background: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)), url(../image/IMG-20230705-WA0028.jpg)
+	no-repeat fixed center center;
+	background-size: 100% 100%;
+	width: 100%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+/* header, fondo del header, tamaño */
+header{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: url(../image/PCJimenez/IMG-20231002-WA0019.jpg)
+	no-repeat fixed bottom center;
+	background-size: 100%;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px;
+	box-sizing: border-box;
+}
+/* fondo negro transparente del header */
+header .pantalla{
+	position: absolute;
+	background: #000;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: 100%;
+	opacity: .8;
+	transition: .5s;
+}
+/* fondo transparente mas claro del header */
+header:hover .pantalla{
+	opacity: .6;
+	
+}
+/* mover imagen del header hacia la derecha 30px */
+header:hover img{
+	transform: translateX(30px);
+
+}
+/* mover texto del header hacia la izquierda 30px, y cambiar color del texto */
+header:hover h1{
+	transform: translateX(-30px);
+	color: #f2f2f2;
+	text-shadow: 0 0 50px rgb(190, 101, 18);
+}
+/* tamaño, tiempo de transicion y altura del logo */
+header img{
+	width: 25%;
+	transition: .5s;
+	z-index: 5;
+}
+/* tamaño, color, tiempo de transicion y altura del texto */
+h1{
+	font-size: 70px;
+	color: white;
+	transition: .5s;
+	z-index: 5;
+}
+/* menu de navegacion de la pagina */
+nav{
+	background: rgba(42, 66, 152,.7);
+	width: 100%;
+	height: auto;
+	z-index: 20;
+	position: relative;
+}
+.navegacion{
+	width: 100%;
+	z-index: 9999999;
+}
+
+/* clase añadida para colocarlo fijo en la parte de arriba */
+.navegacion.abajo{
+	position: fixed;
+	top: 0;
+	transition: .5s;
+}
+
+.navegacion.abajo header img{
+	width: 7%;
+}
+
+.navegacion.abajo header h1{
+	font-size: 30px;
+}
+
+/* estilos de la lista desordenada */
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+}
+/* estilos del menu desplegable */
+nav .desple{
+	top: 100%;
+	position: absolute;
+	flex-direction: column;
+	display: none;
+	left: 0;
+}
+/* estilo hover para aparecer */
+nav li:hover .desple{
+	display: flex;
+
+}
+/* estilos de los enlaces del menu desplegable */
+nav .desple a{
+	padding: 0;
+	text-decoration: none;
+}
+/* estilos de los articulos de la lista del menu desplegable */
+nav .desple a li{
+	color: #fff;
+	background: rgba(42, 66, 152,.7);
+	padding: 12px 22px;
+	width: 120%;
+	display: block;
+	font-size: 20px;
+	transition: .5s;
+	margin: 0;
+}
+/* estilo de los elementos de la lista */
+nav ul li{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+	width: 100%;
+}
+/* estilo de los enlaces de los articulos de la lista */
+nav ul li a {
+	color: #fff;
+	padding: 12px 22px;
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	transition: .5s;
+}
+/* Color del menu desplegable cuando pasa a estar arriba */
+nav.abajo .desple li{
+	background: rgba(42, 66, 152,1);
+}
+/* clase añadida para cambiar el fondo de los articulos de la lista */
+nav.abajo ul li:hover{
+	background: rgb(57, 91, 242);
+}
+nav.abajo ul li:hover{
+	background: rgb(57, 91, 242);
+}
+/* pseudo-clase hover para cambiar el fondo y padding de los articulos de la lista */
+nav ul li:hover{
+	background: rgba(57, 91, 242, .8);
+	
+}
+/* tamaño del contenedor main */
+main{
+	backdrop-filter: blur(1px);
+	width: 100%;
+	position: relative;
+	top: 0;
+}
+
+main.arriba{
+	top: 10%;
+	margin-top: 15%;
+}
+
+/* estilos de la seccion de contenido */
+main section{
+	padding: 15px;
+	box-sizing: border-box;
+}
+/* estilo del h2 titulo principal del contenido */
+main section h2{
+	color: #fff;
+	font-size: 35px;
+	margin-bottom: 15px;
+	margin-left: 40px;
+}
+/* estilos de los articulos del contenido*/
+main section article{
+	background: rgba(243, 231, 231, 0.8);
+	padding: 20px;
+	width: 100%;
+	box-sizing: border-box;
+	transition: .3s ease-out;
+}
+/* estilos del h3 titulos de los articulos */
+main article h3{
+	font-size: 25px;
+	margin: 10px;
+
+}
+/* estilos del article "contenido" */
+.contenido{
+	display: flex;
+	justify-content: space-between;
+
+}
+/* estilos del mrco de las imagenes */
+main .marco{
+	background: rgb(229, 112, 16);
+	width: 40%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	border-radius: 20px;
+}
+main .cont{
+	width: 60%;
+
+}
+main .cont p{
+	margin: 15px;
+	font-weight: 5px;
+	font-size: 1.1rem;
+
+}
+/* estilos de las imagenes del marco */
+.marco img{
+	width: 80%;
+	height: auto;
+	margin: 10px;
+	border-radius: 20px;
+
+}
+/* estilos del pie de pagina */
+footer {
+	background: black;
+	width: 100%;
+	color: #fff;
+	padding: 20px; 
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	z-index: -100;
+
+}
+/* estilos de la caja de las imagenes */
+.redes{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+.uptb{
+	border-radius: 1rem;
+	width: 20%;
+}
+.information{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+.information .div{
+	width: 50%;
+	text-align: center;
+}
+footer b{
+	color: #e95318;
+	font-size: 20px;
+}
+footer p{
+	margin: 5px;
+}
+.gaceta{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 15px;
+}
+.gaceta img, .renace img{
+	width: 100%;
+}
+.renace{
+	width: 50%;
+}
+/* Estilos de las imagenes del pie de pagina */
+.redes img{
+	width: 10%;
+	height: auto;
+	transition: .5s;
+}
+/* pseudo-clase nth-child() para seleccionar al segundo div redes */
+.redes:nth-child(2){
+	display: flex;
+	flex-direction: column;
+}
+/* pseudo-clase nth-child() que selecciona a un div hijo y una pseudo-clase nth-child() para seleccionar el primer enlace */
+.redes:nth-child(2) .dos a:nth-child(1){
+	margin-right: 10px;
+	text-decoration: none;
+	color: white;
+
+}
+/* pseudo-clase nth-child() que selecciona a un div hijo y una pseudo-clase nth-child() para seleccionar el segundo enlace */
+.redes:nth-child(2) .dos a:nth-child(2){
+	margin-left: 10px;
+	color: white;
+	text-decoration: none;
+
+}
+/* pseudo-clase para animar y agrandar la imagenes del footer */
+.redes img:hover{
+	animation: rotar .8s alternate;
+}
+/* animacion de la imagen del footer */
+@keyframes rotar{
+	0%{
+		transform: rotate(15deg);
+	}
+	25%{
+		transform: rotate(-15deg);
+	}
+	50%{
+		transform: rotate(15deg);
+	}
+	75%{
+		transform: rotate(-15deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+
+}
+
+@media (min-width: 881px) and (max-width: 950px){
+	article .p{
+		width: 85%;
+	}
+}
+
+@media (min-width: 651px) and (max-width: 880px){
+	header img{
+		width: 20%;
+	}
+	.navegacion.abajo header img{
+		width: 15%;
+	}
+
+	nav ul li a {
+		font-size: medium;
+	}
+	h1{
+		font-size: 40px;
+	}
+	article .p{
+		width: 100%;
+	}
+
+	article .imgCTN{
+		flex-wrap: wrap;
+	}
+
+	article .imgCTN img{
+		width: 40%
+	}
+
+	.container-galeria{
+		width: 95%;
+	}
+
+	.gaceta img{
+		width: 100%;
+	}
+	.redes img{
+		width: 20%;
+	}
+
+	footer b,footer p,footer a{
+		font-size: small;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 650px){
+	header img{
+		width: 20%;
+	}
+	.navegacion.abajo header img{
+		width: 15%;
+	}
+
+	nav ul li a {
+		font-size: small;
+	}
+	h1{
+		font-size: 40px;
+	}
+
+	article .p{
+		width: 100%;
+	}
+
+	article .emergencia h4{
+		font-size: medium;
+	}
+
+	article .emergencia p, article .p{
+		font-size: smaller;
+	}
+
+	article .imgCTN{
+		flex-wrap: wrap;
+	}
+
+	article .imgCTN img{
+		width: 100%;
+		height: auto;
+	}
+
+	.container-galeria{
+		width: 95%;
+	}
+
+	.gaceta img{
+		width: 100%;
+	}
+	.redes img{
+		width: 20%;
+	}
+
+	footer b,footer p,footer a{
+		font-size: smaller;
+	}
+
+	.renace img{
+		width: 100%;
+	}
+
+	.contenido{
+		flex-direction: column;
+	}
+
+	main .marco{
+		width: 100%;
+	}
+
+	main .cont{
+		width: 100%;
+	}
+}
+
+@media (max-width: 500px){
+	header img{
+		width: 18%;
+	}
+
+	main section h2{
+		font-size: 1.3rem;
+	}
+
+	.navegacion.abajo header img{
+		width: 13%;
+	}
+
+	nav ul li a {
+		font-size: small;
+	}
+	h1{
+		font-size: 35px;
+	}
+
+	article .p{
+		width: 100%;
+	}
+
+	article .emergencia h4{
+		font-size: medium;
+	}
+
+	article .cont p{
+		font-size: smaller;
+	}
+
+	article .imgCTN{
+		flex-wrap: wrap;
+	}
+
+	article .imgCTN img{
+		width: 100%;
+		height: auto;
+	}
+
+	.container-galeria{
+		width: 95%;
+	}
+
+	.gaceta img{
+		width: 100%;
+	}
+	.redes img{
+		width: 20%;
+	}
+
+	footer b,footer p,footer a{
+		font-size: smaller;
+	}
+
+	.renace img{
+		width: 100%;
+	}
+	.contenido{
+		flex-direction: column;
+	}
+
+	main .marco{
+		width: 100%;
+	}
+
+	main .cont{
+		width: 100%;
+	}
+}
